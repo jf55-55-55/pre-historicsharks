@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('ocean_background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+/* Navigation Bar */
+nav {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.welcome h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.welcome p {
+  font-size: 20px;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 20px auto; /* Centers paragraphs horizontally */
+}
+
+/* Shark Grid */
+.shark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center; /* Centers text in shark cards */
+}
+.shark-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.shark-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.shark-card:hover img {
+  transform: scale(1.1);
+}
+.shark-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.shark-card:hover .shark-info {
+  transform: translateY(0);
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+.modal-content h2 {
+  margin-top: 0;
+}
+.modal-content p {
+  margin: 10px 0;
+  text-align: center; /* Centers text in the modal */
+}
